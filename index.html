@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Functional Cycle</title>
+    <style>
+      @keyframes slow-pulse {
+        0%, 100% { transform: rotate(-12deg) scale(1.25); }
+        50% { transform: rotate(-12deg) scale(1.35); }
+      }
+      .animate-slow-pulse {
+        animation: slow-pulse 2.5s ease-in-out infinite;
+      }
+      @keyframes ping-signal {
+        0% {
+          transform: scale(0.5);
+          opacity: 0.75;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+      .animate-ping-signal {
+        animation: ping-signal 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+      }
+      @keyframes nudge-right {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(8px); }
+      }
+      .animate-nudge-right {
+        animation: nudge-right 1.5s ease-in-out infinite;
+      }
+      @keyframes nudge-down {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(8px); }
+      }
+      .animate-nudge-down {
+        animation: nudge-down 1.5s ease-in-out infinite;
+      }
+      @keyframes nudge-up {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-nudge-up {
+        animation: nudge-up 1.5s ease-in-out infinite;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "lucide-react": "https://esm.sh/lucide-react@0.400.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

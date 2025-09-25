@@ -1,0 +1,5 @@
+{
+  "name": "Computer Functional Cycle Simulator",
+  "description": "An interactive educational tool to visualize and understand the computer's functional cycle (Input, Processing, Storage, Output) for various peripheral devices.",
+  "requestFramePermissions": []
+}
