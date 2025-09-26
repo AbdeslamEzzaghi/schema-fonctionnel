@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowRight, ArrowDown, ArrowUp } from 'lucide-react';
-import CycleStage from './components/CycleStage';
-import type { SimulationCycle } from './types';
-import { SCENARIOS } from './constants';
+import CycleStage from './components/CycleStage.tsx';
+import type { SimulationCycle } from './types.ts';
+import { SCENARIOS } from './constants.ts';
 
 const Arrow: React.FC<{ isActive: boolean }> = ({ isActive }) => (
   <div className="flex items-center justify-center min-h-[50px] md:flex-1 md:min-h-0 md:min-w-[50px] lg:min-w-[100px] px-2">

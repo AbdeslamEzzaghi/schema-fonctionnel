@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Icon from './Icon';
-import AnimatedText from './AnimatedText';
+import Icon from './Icon.tsx';
+import AnimatedText from './AnimatedText.tsx';
 
 interface CycleStageProps {
   title: string;
