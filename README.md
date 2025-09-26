@@ -10,7 +10,7 @@ This simulation provides a visual guide to how different computer components wor
 -   **Visual Simulation:** Watch the data flow from input devices, through processing and storage, to output devices.
 -   **Dynamic Animations:** Engaging animations highlight the active components and data pathways at each step.
 -   **Educational Descriptions:** Clear, concise explanations for each stage of the cycle.
--   **No Build Step Required:** Runs directly in the browser with ES modules.
+-   **No Build Step Required:** Runs directly in the browser, using Babel to transpile code on-the-fly.
 
 ## Local Setup
 
