@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  Keyboard, Mouse, Mic, ScanLine, Camera, Cpu, MemoryStick, HardDrive, Monitor, Speaker, Printer, Gamepad, Wifi, FileCode, Mail, Video, type Icon as LucideIcon, ArrowRight, ArrowDown, ArrowUp
+  Keyboard, Mouse, Mic, ScanLine, Camera, Cpu, MemoryStick, HardDrive, Monitor, Speaker, Printer, Gamepad, Wifi, FileCode, Mail, Video, type Icon as LucideIcon, ArrowRight, ArrowDown, ArrowUp, Server
 } from 'lucide-react';
 
 // --- From types.ts ---
@@ -52,7 +52,7 @@ const SCENARIOS: Scenario[] = [
     cycle: {
         input: { title: "Entrée", description: "L'utilisateur clique sur le bouton 'Lecture' avec la souris pour lancer la vidéo.", icon: "mouse" },
         processing: { title: "Traitement", description: "Le processeur décode le fichier vidéo pour transformer les données en images et en son.", icon: "cpu" },
-        storage: { title: "Stockage", description: "La vidéo est lue depuis le disque dur ou chargée en continu (streaming) depuis Internet.", icon: "network" },
+        storage: { title: "Stockage", description: "Pour une vidéo en streaming (YouTube), les données sont chargées en continu depuis un serveur distant via Internet.", icon: "server" },
         output: { title: "Sortie", description: "Les images de la vidéo sont affichées sur l'écran et le son est diffusé par les haut-parleurs.", icon: "monitor" }
     }
   },
@@ -151,6 +151,7 @@ const iconMap: { [key: string]: LucideIcon } = {
   'file-code': FileCode,
   mail: Mail,
   video: Video,
+  server: Server,
 };
 
 const Icon: React.FC<IconProps> = ({ name, className = 'w-8 h-8' }) => {
@@ -234,6 +235,7 @@ const iconColorMap: { [key: string]: string } = {
   printer: 'text-gray-600',
   gamepad: 'text-red-600',
   network: 'text-cyan-500',
+  server: 'text-slate-700',
 };
 
 const iconBgColorMap: { [key: string]: string } = {
@@ -250,6 +252,7 @@ const iconBgColorMap: { [key: string]: string } = {
     printer: 'bg-gray-600/10',
     gamepad: 'bg-red-600/10',
     network: 'bg-cyan-500/10',
+    server: 'bg-slate-700/10',
 };
 
 const iconBorderColorMap: { [key: string]: string } = {
@@ -266,6 +269,7 @@ const iconBorderColorMap: { [key: string]: string } = {
     printer: 'border-gray-500',
     gamepad: 'border-red-500',
     network: 'border-cyan-500',
+    server: 'border-slate-600',
 };
 
 const iconShadowColorMap: { [key: string]: string } = {
@@ -282,6 +286,7 @@ const iconShadowColorMap: { [key: string]: string } = {
     printer: 'shadow-gray-500/20',
     gamepad: 'shadow-red-500/20',
     network: 'shadow-cyan-500/20',
+    server: 'shadow-slate-600/20',
 };
 
 const iconAnimationMap: { [key: string]: string } = {
@@ -298,6 +303,7 @@ const iconAnimationMap: { [key: string]: string } = {
   speaker: 'animate-slow-pulse',
   printer: 'animate-slow-pulse',
   network: 'animate-slow-pulse',
+  server: 'animate-slow-pulse',
 };
 
 const componentNameMap: { [key: string]: string } = {
@@ -314,6 +320,7 @@ const componentNameMap: { [key: string]: string } = {
   printer: 'Imprimante',
   gamepad: 'Manette de jeu',
   network: 'Réseau (Internet)',
+  server: 'Serveur distant',
 };
 
 const iconPingColorMap: { [key: string]: string } = {
@@ -330,6 +337,7 @@ const iconPingColorMap: { [key: string]: string } = {
     printer: 'bg-gray-400/80',
     gamepad: 'bg-red-400/80',
     network: 'bg-cyan-400/80',
+    server: 'bg-slate-500/80',
 };
 
 
